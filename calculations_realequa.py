@@ -3,7 +3,7 @@ import logging
 import numpy as np
 
 # Set up logging configuration
-logging.basicConfig(filename='2.05-15-11-24.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='rqa-2.31-15-11-24.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def load_data_from_json(file_path):
     logging.info(f"Attempting to load data from {file_path}")
@@ -26,7 +26,7 @@ def transform_data(data):
         logging.error(f"Error in data transformation: {e}")
         return None
 
-def multiply_column(data, column_index, x):
+def calculate_expression(data, column_index, c):
     if data is None:
         logging.error("Input 'data' is None")
         return None
@@ -35,16 +35,16 @@ def multiply_column(data, column_index, x):
         if column_index < 0 or column_index >= data.shape[1]:
             raise IndexError("Column index is out of bounds")
 
-        data[:, column_index] *= x
+        col = data[:, column_index]
+        result = (((col + 1)**2) - 1) / (((col + 1)**2 + 1)) * c
 
-        for i, row in enumerate(data, 1):
-            formatted_row = ["{:.10f}".format(value) for value in row]
-            logging.info(f"Row {i} after multiplying column {column_index + 1}: {formatted_row}")
-            print(f"Row {i} after multiplying column {column_index + 1}: {formatted_row}")
+        formatted_result = np.array2string(result, formatter={'float_kind':lambda x: "%.10f" % x})
+        logging.info(f"Calculated result for column {column_index + 1}: {formatted_result}")
+        print(f"Calculated result for column {column_index + 1}: {formatted_result}")
 
-        return data
+        return result
     except Exception as e:
-        logging.error(f"Error in column multiplication: {e}")
+        logging.error(f"Error in calculating expression: {e}")
         return None
 
 def main(file_path):
@@ -58,10 +58,9 @@ def main(file_path):
         logging.error("Exiting due to data transformation error.")
         return None
 
-    for i, row in enumerate(transformed_data, 1):
-        formatted_row = ["{:.10f}".format(value) for value in row]
-        print(f"{i} = {formatted_row}")
-        logging.info(f"Row {i} = {formatted_row}")
+    formatted_data = np.array2string(transformed_data, formatter={'float_kind':lambda x: "%.10f" % x})
+    logging.info(f"Transformed data: {formatted_data}")
+    print(f"Transformed data: {formatted_data}")
 
     return transformed_data
 
@@ -71,5 +70,5 @@ if __name__ == "__main__":
 
     if trans_data is not None:
         column_index = 2
-        x = 299792458
-        modified_data = multiply_column(trans_data, column_index, x)
+        c = 299792458
+        calculated_result = calculate_expression(trans_data, column_index, c)

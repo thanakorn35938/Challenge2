@@ -3,7 +3,7 @@ import logging
 import numpy as np
 
 # Set up logging configuration
-logging.basicConfig(filename='2.05-15-11-24.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='2.23-15-11-24.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def load_data_from_json(file_path):
     logging.info(f"Attempting to load data from {file_path}")
@@ -37,10 +37,9 @@ def multiply_column(data, column_index, x):
 
         data[:, column_index] *= x
 
-        for i, row in enumerate(data, 1):
-            formatted_row = ["{:.10f}".format(value) for value in row]
-            logging.info(f"Row {i} after multiplying column {column_index + 1}: {formatted_row}")
-            print(f"Row {i} after multiplying column {column_index + 1}: {formatted_row}")
+        formatted_data = np.array2string(data, formatter={'float_kind':lambda x: "%.10f" % x})
+        logging.info(f"Data after multiplying column {column_index + 1}: {formatted_data}")
+        print(f"Data after multiplying column {column_index + 1}: {formatted_data}")
 
         return data
     except Exception as e:
@@ -58,10 +57,9 @@ def main(file_path):
         logging.error("Exiting due to data transformation error.")
         return None
 
-    for i, row in enumerate(transformed_data, 1):
-        formatted_row = ["{:.10f}".format(value) for value in row]
-        print(f"{i} = {formatted_row}")
-        logging.info(f"Row {i} = {formatted_row}")
+    formatted_data = np.array2string(transformed_data, formatter={'float_kind':lambda x: "%.10f" % x})
+    logging.info(f"Transformed data: {formatted_data}")
+    print(f"Transformed data: {formatted_data}")
 
     return transformed_data
 
