@@ -55,20 +55,28 @@ def calculate_expression(data, column_index, c):
         return None
     ### End of Function ###
 
-def velocity_calc(data, col1, col2, col3):
+def velocity_calc(data, col1, col2):
     if data is None:
         logging.error("Input 'data' is None")
         return None
 
     try:
-        
-    
+        if col1 < 0 or col1 >= data.shape[1] or col2 < 0 or col2 >= data.shape[1]:
+            raise IndexError("Column index is out of bounds")
+
+        column1 = data[:, col1]
+        column2 = data[:, col2]
+        result = (10**((column1 - column2 + 5) / 5)) / 10**6
+
+        formatted_result = np.array2string(result, formatter={'float_kind':lambda x: "%.10f" % x})
+        logging.info(f"Calculated velocity for columns {col1 + 1}, {col2 + 1}: {formatted_result}")
+        print(f"Calculated velocity for columns {col1 + 1}, {col2 + 1}: {formatted_result}")
+
         return result
     except Exception as e:
-        logging.error(f"Error in calculating expression: {e}")
+        logging.error(f"Error in calculating velocity: {e}")
         return None
     ### End of Function ###
-
 
 def file_loader(file_path):
     data = load_data_from_json(file_path)
@@ -98,3 +106,5 @@ if __name__ == "__main__":
         c = 299792458
         calculated_result = calculate_expression(trans_data, column_index, c)
         print(calculated_result)
+        velocity_data = velocity_calc(trans_data, 0, 1)
+        print(velocity_data)

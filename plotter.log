@@ -1,0 +1,19 @@
+2024-11-18 04:10:36,795:INFO:Starting the plotting process
+2024-11-18 04:10:36,796:INFO:Reading CSV file
+2024-11-18 04:10:36,798:ERROR:Error occurred: [Errno 2] No such file or directory: 'plot_data.csv'
+2024-11-18 04:10:36,798:INFO:Saving plot as FHD JPG
+2024-11-18 04:12:17,637:INFO:Starting the plotting process
+2024-11-18 04:12:17,637:INFO:Reading CSV file
+2024-11-18 04:12:17,641:INFO:Extracting columns
+2024-11-18 04:12:17,642:INFO:Plotting data
+2024-11-18 04:12:17,659:INFO:Saving plot as JPG
+2024-11-18 04:12:17,735:INFO:Displaying plot
+2024-11-18 04:12:17,735:INFO:Plotting process completed successfully
+2024-11-18 04:16:17,825:INFO:Starting the plotting process
+2024-11-18 04:16:17,825:INFO:Reading CSV file
+2024-11-18 04:16:17,828:INFO:Sorting data by the first column
+2024-11-18 04:16:17,835:INFO:Extracting columns
+2024-11-18 04:16:17,836:INFO:Plotting data
+2024-11-18 04:16:17,847:INFO:Saving plot as JPG
+2024-11-18 04:16:17,901:INFO:Displaying plot
+2024-11-18 04:16:17,902:INFO:Plotting process completed successfully
