@@ -1,5 +1,6 @@
 import cupy as cp
 from scipy.optimize import minimize
+import json
 
 # Example dataset arrays (replace with your real data)
 m = cp.array([...])  # Apparent magnitudes as a GPU array
@@ -33,3 +34,19 @@ result = minimize(total_error, initial_guess, method='Nelder-Mead')
 H0_estimated, A_V_estimated = result.x
 print(f"Estimated H0: {H0_estimated} km/s/Mpc")
 print(f"Estimated A_V: {A_V_estimated}")
+# Function to read data from a JSON file
+def read_data_from_json(file_path):
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+    return data
+
+# Path to the JSON file
+json_file_path = '/c:/Users/tanth/Desktop/SACC/Challenge2/data.json'
+
+# Read data from the JSON file
+data = read_data_from_json(json_file_path)
+
+# Set the arrays with the imported data
+m = cp.array(data['apparent_magnitudes'])
+M = cp.array(data['absolute_magnitudes'])
+v = cp.array(data['velocities'])
