@@ -1,10 +1,14 @@
 import json
 import logging
 import numpy as np
+from datetime import datetime
 
 # Set up logging configuration
-logging.basicConfig(filename='rqa-2.31-15-11-24.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+log_filename = datetime.now().strftime('logfile_%Y%m%d_%H%M%S.log')
+logging.basicConfig(filename=log_filename, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+###  End of Basics Setup ###
 
+### Start of Functions Declaration ###
 def load_data_from_json(file_path):
     logging.info(f"Attempting to load data from {file_path}")
     try:
@@ -15,6 +19,7 @@ def load_data_from_json(file_path):
     except Exception as e:
         logging.error(f"Failed to load data from JSON file: {e}")
         return None
+    ### End of Function ###
 
 def transform_data(data):
     logging.info("Starting data transformation.")
@@ -25,6 +30,8 @@ def transform_data(data):
     except Exception as e:
         logging.error(f"Error in data transformation: {e}")
         return None
+    ### End of Function ###
+    
 
 def calculate_expression(data, column_index, c):
     if data is None:
@@ -36,7 +43,7 @@ def calculate_expression(data, column_index, c):
             raise IndexError("Column index is out of bounds")
 
         col = data[:, column_index]
-        result = (((col + 1)**2) - 1) / (((col + 1)**2 + 1)) * c
+        result = (((col + 1)**2 - 1) / ((col + 1)**2 + 1)) * c
 
         formatted_result = np.array2string(result, formatter={'float_kind':lambda x: "%.10f" % x})
         logging.info(f"Calculated result for column {column_index + 1}: {formatted_result}")
@@ -46,6 +53,22 @@ def calculate_expression(data, column_index, c):
     except Exception as e:
         logging.error(f"Error in calculating expression: {e}")
         return None
+    ### End of Function ###
+
+def velocity_calc(data, col1, col2, col3):
+    if data is None:
+        logging.error("Input 'data' is None")
+        return None
+
+    try:
+        
+    
+        return result
+    except Exception as e:
+        logging.error(f"Error in calculating expression: {e}")
+        return None
+    ### End of Function ###
+
 
 def file_loader(file_path):
     data = load_data_from_json(file_path)
@@ -63,6 +86,8 @@ def file_loader(file_path):
     print(f"Transformed data: {formatted_data}")
 
     return transformed_data
+### End of Function ###
+### End of Functions Declaration ###
 
 if __name__ == "__main__":
     file_path = 'Challenge2_data.json'
@@ -72,3 +97,4 @@ if __name__ == "__main__":
         column_index = 2
         c = 299792458
         calculated_result = calculate_expression(trans_data, column_index, c)
+        print(calculated_result)
