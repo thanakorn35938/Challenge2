@@ -1,0 +1,18 @@
+2024-11-26 15:49:45,080 - INFO - Reading data from JSON file: Challenge2_data.json
+2024-11-26 15:49:48,498 - INFO - Data successfully read from JSON file
+2024-11-26 15:49:50,629 - INFO - Setting up data arrays
+2024-11-26 15:49:56,507 - INFO - Initial guess for H0 and A_V: [70, 0.1]
+2024-11-26 15:49:58,116 - INFO - Starting minimization process
+2024-11-26 15:50:16,600 - INFO - Calculating total error with params: [70.   0.1]
+2024-11-26 15:51:00,243 - INFO - Total error calculated: 61270.70741028452
+2024-11-26 15:51:00,247 - INFO - Calculating total error with params: [70.   0.1]
+2024-11-26 15:51:09,732 - INFO - Total error calculated: 61270.70741028452
+2024-11-26 15:51:09,733 - INFO - Calculating total error with params: [71.   0.1]
+2024-11-26 15:51:10,074 - INFO - Total error calculated: 61315.60256963527
+2024-11-26 15:51:10,075 - INFO - Calculating total error with params: [68.381966  0.1     ]
+2024-11-26 15:51:10,452 - INFO - Total error calculated: 61196.063804328136
+2024-11-26 15:51:10,453 - INFO - Calculating total error with params: [65.76393197  0.1       ]
+2024-11-26 15:51:11,171 - INFO - Total error calculated: 61069.77947825426
+2024-11-26 15:51:11,172 - INFO - Calculating total error with params: [61.52786391  0.1       ]
+2024-11-26 15:51:12,515 - INFO - Total error calculated: 60849.765135395144
+2024-11-26 15:51:12,516 - INFO - Calculating total error with params: [54.67376175  0.1       ]

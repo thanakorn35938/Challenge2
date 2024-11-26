@@ -1,0 +1,6 @@
+2024-11-20 01:41:49,865 - INFO - Reading data from JSON file: Challenge2_data.json
+2024-11-20 01:41:49,866 - INFO - Data successfully read from JSON file
+2024-11-20 01:41:49,867 - INFO - Setting up data arrays
+2024-11-20 01:41:49,988 - INFO - Initial guess for H0 and A_V: [70, 0.1]
+2024-11-20 01:41:49,988 - INFO - Starting minimization process
+2024-11-20 01:41:49,990 - INFO - Calculating total error with params: [70.   0.1]
