@@ -1,0 +1,48 @@
+2024-11-26 16:03:02,148 - INFO - Reading data from JSON file: Challenge2_data.json
+2024-11-26 16:03:02,148 - INFO - Data successfully read from JSON file
+2024-11-26 16:03:02,148 - INFO - Setting up data arrays
+2024-11-26 16:03:02,303 - INFO - Initial guess for H0 and A_V: [67, 0.1]
+2024-11-26 16:03:02,303 - INFO - Starting minimization process
+2024-11-26 16:03:02,304 - INFO - Calculating total error with params: [67.   0.1]
+2024-11-26 16:03:02,770 - INFO - Total error calculated: 61130.27598484443
+2024-11-26 16:03:02,771 - INFO - Calculating total error with params: [67.   0.1]
+2024-11-26 16:03:02,777 - INFO - Total error calculated: 61130.27598484443
+2024-11-26 16:03:02,778 - INFO - Calculating total error with params: [68.   0.1]
+2024-11-26 16:03:02,780 - INFO - Total error calculated: 61178.071535025505
+2024-11-26 16:03:02,781 - INFO - Calculating total error with params: [65.381966  0.1     ]
+2024-11-26 16:03:02,781 - INFO - Total error calculated: 61050.75973857836
+2024-11-26 16:03:02,782 - INFO - Calculating total error with params: [62.76393197  0.1       ]
+2024-11-26 16:03:02,782 - INFO - Total error calculated: 60916.08308476527
+2024-11-26 16:03:02,782 - INFO - Calculating total error with params: [58.52786391  0.1       ]
+2024-11-26 16:03:02,783 - INFO - Total error calculated: 60680.97427089061
+2024-11-26 16:03:02,783 - INFO - Calculating total error with params: [51.67376175  0.1       ]
+2024-11-26 16:03:02,784 - INFO - Total error calculated: 60248.13054871214
+2024-11-26 16:03:02,784 - INFO - Calculating total error with params: [40.58359142  0.1       ]
+2024-11-26 16:03:02,785 - INFO - Total error calculated: 59366.16223009688
+2024-11-26 16:03:02,786 - INFO - Calculating total error with params: [22.63931876  0.1       ]
+2024-11-26 16:03:02,787 - INFO - Total error calculated: 57077.68879991075
+2024-11-26 16:03:02,787 - INFO - Calculating total error with params: [-6.3951245  0.1      ]
+2024-11-26 16:03:02,788 - INFO - Total error calculated: nan
+2024-11-26 16:03:02,789 - INFO - Calculating total error with params: [nan nan]
+2024-11-26 16:03:02,789 - INFO - Total error calculated: nan
+2024-11-26 16:03:02,789 - INFO - Calculating total error with params: [nan nan]
+2024-11-26 16:03:02,790 - INFO - Total error calculated: nan
+2024-11-26 16:03:02,790 - INFO - Calculating total error with params: [nan nan]
+2024-11-26 16:03:02,791 - INFO - Total error calculated: nan
+2024-11-26 16:03:02,791 - INFO - Calculating total error with params: [nan nan]
+2024-11-26 16:03:02,792 - INFO - Total error calculated: nan
+2024-11-26 16:03:02,792 - INFO - Calculating total error with params: [nan nan]
+2024-11-26 16:03:02,793 - INFO - Total error calculated: nan
+2024-11-26 16:03:02,794 - INFO - Calculating total error with params: [nan nan]
+2024-11-26 16:03:02,795 - INFO - Total error calculated: nan
+2024-11-26 16:03:02,796 - INFO - Calculating total error with params: [nan nan]
+2024-11-26 16:03:02,797 - INFO - Total error calculated: nan
+2024-11-26 16:03:02,797 - INFO - Calculating total error with params: [nan nan]
+2024-11-26 16:03:02,798 - INFO - Total error calculated: nan
+2024-11-26 16:03:02,798 - INFO - Calculating total error with params: [nan nan]
+2024-11-26 16:03:02,798 - INFO - Total error calculated: nan
+2024-11-26 16:03:02,799 - INFO - Calculating total error with params: [nan nan]
+2024-11-26 16:03:02,799 - INFO - Total error calculated: nan
+2024-11-26 16:03:02,799 - INFO - Minimization process completed
+2024-11-26 16:03:02,799 - INFO - Estimated H0: nan km/s/Mpc
+2024-11-26 16:03:02,799 - INFO - Estimated A_V: nan

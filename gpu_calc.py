@@ -1,4 +1,4 @@
-import cupy as cp
+import numpy as np
 from scipy.optimize import minimize
 import json
 import logging
@@ -11,14 +11,17 @@ logging.basicConfig(filename=log_filename, level=logging.INFO, format='%(asctime
 # Constants
 kappa_v = 0.1  # Example value for the extinction coefficient (for a given wavelength)
 
-# Function to calculate the total error using GPU (CuPy)
+# Function to calculate the total error using NumPy
 def total_error(params):
     logging.info(f"Calculating total error with params: {params}")
     H0, A_V = params
-    # Perform the error calculation in parallel (on GPU)
-    model = m - M - 5 * cp.log10(v / H0) + 5 - H0 * kappa_v * A_V
+    # Perform the error calculation
+    if H0 <= 0 or A_V < 0:
+        logging.warning(f"Unreasonable parameter values encountered: H0={H0}, A_V={A_V}")
+        return np.inf
+    model = m - M - 5 * np.log10(np.maximum(v / H0, 1e-10)) + 5 - H0 * kappa_v * A_V
     error = model ** 2
-    total_err = cp.sum(error).get()  # .get() moves the result from GPU to CPU
+    total_err = np.sum(error)
     logging.info(f"Total error calculated: {total_err}")
     return total_err
 
@@ -38,15 +41,15 @@ data = read_data_from_json(json_file_path)
 
 # Set the arrays with the imported data
 logging.info("Setting up data arrays")
-m = cp.array(data['Apparent Magitude (m)'])
-M = cp.array(data['Absolute Magnitude (M)'])
-v = cp.array(data['Redshift (z)'])
+m = np.array(data['Apparent Magitude (m)'])
+M = np.array(data['Absolute Magnitude (M)'])
+v = np.array(data['Redshift (z)'])
 
 # Initial guess for H0 and A_V
-initial_guess = [67, 0.1]  # H0 = 70 km/s/Mpc, A_V = 0.1
+initial_guess = [67, 0.1]  # H0 = 67 km/s/Mpc, A_V = 0.1
 logging.info(f"Initial guess for H0 and A_V: {initial_guess}")
 
-# Minimize the total error using scipy.optimize with CuPy support
+# Minimize the total error using scipy.optimize
 logging.info("Starting minimization process")
 result = minimize(total_error, initial_guess, method='Powell')
 logging.info("Minimization process completed")

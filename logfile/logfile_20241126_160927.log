@@ -1,0 +1,124 @@
+2024-11-26 16:09:27,136 - INFO - Reading data from JSON file: Challenge2_data.json
+2024-11-26 16:09:27,137 - INFO - Data successfully read from JSON file
+2024-11-26 16:09:27,137 - INFO - Setting up data arrays
+2024-11-26 16:09:27,137 - INFO - Initial guess for H0 and A_V: [67, 0.1]
+2024-11-26 16:09:27,137 - INFO - Starting minimization process
+2024-11-26 16:09:27,139 - INFO - Calculating total error with params: [67.   0.1]
+2024-11-26 16:09:27,139 - INFO - Total error calculated: 61130.27598484443
+2024-11-26 16:09:27,140 - INFO - Calculating total error with params: [67.   0.1]
+2024-11-26 16:09:27,141 - INFO - Total error calculated: 61130.27598484443
+2024-11-26 16:09:27,142 - INFO - Calculating total error with params: [68.   0.1]
+2024-11-26 16:09:27,142 - INFO - Total error calculated: 61178.071535025505
+2024-11-26 16:09:27,142 - INFO - Calculating total error with params: [65.381966  0.1     ]
+2024-11-26 16:09:27,143 - INFO - Total error calculated: 61050.75973857836
+2024-11-26 16:09:27,143 - INFO - Calculating total error with params: [62.76393197  0.1       ]
+2024-11-26 16:09:27,143 - INFO - Total error calculated: 60916.08308476527
+2024-11-26 16:09:27,145 - INFO - Calculating total error with params: [58.52786391  0.1       ]
+2024-11-26 16:09:27,145 - INFO - Total error calculated: 60680.97427089061
+2024-11-26 16:09:27,145 - INFO - Calculating total error with params: [51.67376175  0.1       ]
+2024-11-26 16:09:27,145 - INFO - Total error calculated: 60248.13054871214
+2024-11-26 16:09:27,146 - INFO - Calculating total error with params: [40.58359142  0.1       ]
+2024-11-26 16:09:27,146 - INFO - Total error calculated: 59366.16223009688
+2024-11-26 16:09:27,146 - INFO - Calculating total error with params: [22.63931876  0.1       ]
+2024-11-26 16:09:27,146 - INFO - Total error calculated: 57077.68879991074
+2024-11-26 16:09:27,147 - INFO - Calculating total error with params: [-6.3951245  0.1      ]
+2024-11-26 16:09:27,147 - WARNING - Unreasonable parameter values encountered: H0=-6.395124502652024, A_V=0.1
+2024-11-26 16:09:27,148 - INFO - Calculating total error with params: [11.54914861  0.1       ]
+2024-11-26 16:09:27,148 - INFO - Total error calculated: 54299.29539059628
+2024-11-26 16:09:27,148 - INFO - Calculating total error with params: [4.69504638 0.1       ]
+2024-11-26 16:09:27,149 - INFO - Total error calculated: 50535.65285965953
+2024-11-26 16:09:27,149 - INFO - Calculating total error with params: [0.45897817 0.1       ]
+2024-11-26 16:09:27,149 - INFO - Total error calculated: 41199.85770366143
+2024-11-26 16:09:27,149 - INFO - Calculating total error with params: [-2.15905601  0.1       ]
+2024-11-26 16:09:27,151 - WARNING - Unreasonable parameter values encountered: H0=-2.1590560105426277, A_V=0.1
+2024-11-26 16:09:27,151 - INFO - Calculating total error with params: [2.0770122 0.1      ]
+2024-11-26 16:09:27,151 - INFO - Total error calculated: 47174.12248372226
+2024-11-26 16:09:27,151 - INFO - Calculating total error with params: [-0.54102187  0.1       ]
+2024-11-26 16:09:27,151 - WARNING - Unreasonable parameter values encountered: H0=-0.5410218728855796, A_V=0.1
+2024-11-26 16:09:27,152 - INFO - Calculating total error with params: [1.12438839 0.1       ]
+2024-11-26 16:09:27,152 - INFO - Total error calculated: 44702.22161229932
+2024-11-26 16:09:27,152 - INFO - Calculating total error with params: [0.45897817 0.1       ]
+2024-11-26 16:09:27,152 - INFO - Total error calculated: 41199.85770366143
+2024-11-26 16:09:27,153 - INFO - Calculating total error with params: [0.45897817 1.1       ]
+2024-11-26 16:09:27,154 - INFO - Total error calculated: 41118.68323175786
+2024-11-26 16:09:27,155 - INFO - Calculating total error with params: [0.45897817 2.718034  ]
+2024-11-26 16:09:27,155 - INFO - Total error calculated: 40987.509727377175
+2024-11-26 16:09:27,155 - INFO - Calculating total error with params: [  0.45897817 179.08374   ]
+2024-11-26 16:09:27,155 - INFO - Total error calculated: 27946.00991706111
+2024-11-26 16:09:27,156 - INFO - Calculating total error with params: [4.58978171e-01 1.01463236e+03]
+2024-11-26 16:09:27,156 - INFO - Total error calculated: 2.4900021934673164
+2024-11-26 16:09:27,157 - INFO - Calculating total error with params: [4.58978171e-01 2.36657842e+03]
+2024-11-26 16:09:27,157 - INFO - Total error calculated: 73159.57592198004
+2024-11-26 16:09:27,159 - INFO - Calculating total error with params: [4.58978171e-01 1.53102979e+03]
+2024-11-26 16:09:27,159 - INFO - Total error calculated: 10675.96436406164
+2024-11-26 16:09:27,159 - INFO - Calculating total error with params: [4.58978171e-01 6.95481193e+02]
+2024-11-26 16:09:27,159 - INFO - Total error calculated: 4079.3943736778465
+2024-11-26 16:09:27,159 - INFO - Calculating total error with params: [4.58978171e-01 1.00448703e+03]
+2024-11-26 16:09:27,160 - INFO - Total error calculated: 6.609738963511922
+2024-11-26 16:09:27,160 - INFO - Calculating total error with params: [4.58978171e-01 1.02477768e+03]
+2024-11-26 16:09:27,160 - INFO - Total error calculated: 6.609738963734725
+2024-11-26 16:09:27,160 - INFO - Calculating total error with params: [ -66.08204366 2029.1647102 ]
+2024-11-26 16:09:27,160 - WARNING - Unreasonable parameter values encountered: H0=-66.0820436570242, A_V=2029.1647101971253
+2024-11-26 16:09:27,161 - INFO - Calculating total error with params: [4.58978171e-01 1.01463236e+03]
+2024-11-26 16:09:27,161 - INFO - Total error calculated: 2.4900021934673164
+2024-11-26 16:09:27,161 - INFO - Calculating total error with params: [   1.45897817 1014.6323551 ]
+2024-11-26 16:09:27,162 - INFO - Total error calculated: 186040.77614625669
+2024-11-26 16:09:27,162 - INFO - Calculating total error with params: [  -1.15905583 1014.6323551 ]
+2024-11-26 16:09:27,162 - WARNING - Unreasonable parameter values encountered: H0=-1.1590558285121004, A_V=1014.6323550985627
+2024-11-26 16:09:27,162 - INFO - Calculating total error with params: [-1.59055803e-01  1.01463236e+03]
+2024-11-26 16:09:27,162 - WARNING - Unreasonable parameter values encountered: H0=-0.15905580335610048, A_V=1014.6323550985627
+2024-11-26 16:09:27,166 - INFO - Calculating total error with params: [8.40944171e-01 1.01463236e+03]
+2024-11-26 16:09:27,166 - INFO - Total error calculated: 26636.70550257107
+2024-11-26 16:09:27,166 - INFO - Calculating total error with params: [2.22910206e-01 1.01463236e+03]
+2024-11-26 16:09:27,167 - INFO - Total error calculated: 9522.238402239724
+2024-11-26 16:09:27,167 - INFO - Calculating total error with params: [4.54173448e-01 1.01463236e+03]
+2024-11-26 16:09:27,167 - INFO - Total error calculated: 6.592118042265367
+2024-11-26 16:09:27,167 - INFO - Calculating total error with params: [4.59076853e-01 1.01463236e+03]
+2024-11-26 16:09:27,167 - INFO - Total error calculated: 2.4917334822209174
+2024-11-26 16:09:27,168 - INFO - Calculating total error with params: [4.58978146e-01 1.01463236e+03]
+2024-11-26 16:09:27,168 - INFO - Total error calculated: 2.490002193582432
+2024-11-26 16:09:27,168 - INFO - Calculating total error with params: [4.58978171e-01 1.01463236e+03]
+2024-11-26 16:09:27,168 - INFO - Total error calculated: 2.4900021934673258
+2024-11-26 16:09:27,168 - INFO - Calculating total error with params: [4.58978175e-01 1.01463236e+03]
+2024-11-26 16:09:27,168 - INFO - Total error calculated: 2.490002193469252
+2024-11-26 16:09:27,169 - INFO - Calculating total error with params: [4.58978173e-01 1.01463236e+03]
+2024-11-26 16:09:27,170 - INFO - Total error calculated: 2.4900021934676
+2024-11-26 16:09:27,170 - INFO - Calculating total error with params: [4.58978172e-01 1.01463236e+03]
+2024-11-26 16:09:27,170 - INFO - Total error calculated: 2.4900021934673653
+2024-11-26 16:09:27,171 - INFO - Calculating total error with params: [4.58978172e-01 1.01463236e+03]
+2024-11-26 16:09:27,172 - INFO - Total error calculated: 2.4900021934673218
+2024-11-26 16:09:27,172 - INFO - Calculating total error with params: [4.58978172e-01 1.01463236e+03]
+2024-11-26 16:09:27,172 - INFO - Total error calculated: 2.49000219346732
+2024-11-26 16:09:27,172 - INFO - Calculating total error with params: [4.58978172e-01 1.01463236e+03]
+2024-11-26 16:09:27,173 - INFO - Total error calculated: 2.4900021934673138
+2024-11-26 16:09:27,173 - INFO - Calculating total error with params: [4.58978172e-01 1.01463236e+03]
+2024-11-26 16:09:27,173 - INFO - Total error calculated: 2.4900021934673244
+2024-11-26 16:09:27,174 - INFO - Calculating total error with params: [4.58978172e-01 1.01463236e+03]
+2024-11-26 16:09:27,174 - INFO - Total error calculated: 2.4900021934673164
+2024-11-26 16:09:27,175 - INFO - Calculating total error with params: [4.58978172e-01 1.01463236e+03]
+2024-11-26 16:09:27,175 - INFO - Total error calculated: 2.4900021934673138
+2024-11-26 16:09:27,176 - INFO - Calculating total error with params: [4.58978172e-01 1.01563236e+03]
+2024-11-26 16:09:27,176 - INFO - Total error calculated: 2.5300277834361586
+2024-11-26 16:09:27,176 - INFO - Calculating total error with params: [4.58978172e-01 1.01301432e+03]
+2024-11-26 16:09:27,177 - INFO - Total error calculated: 2.59479051938317
+2024-11-26 16:09:27,177 - INFO - Calculating total error with params: [4.58978172e-01 1.01401432e+03]
+2024-11-26 16:09:27,177 - INFO - Total error calculated: 2.505290600527699
+2024-11-26 16:09:27,177 - INFO - Calculating total error with params: [4.58978172e-01 1.01501432e+03]
+2024-11-26 16:09:27,177 - INFO - Total error calculated: 2.4958418496991515
+2024-11-26 16:09:27,178 - INFO - Calculating total error with params: [4.58978172e-01 1.01463236e+03]
+2024-11-26 16:09:27,178 - INFO - Total error calculated: 2.4900021934673138
+2024-11-26 16:09:27,178 - INFO - Calculating total error with params: [4.58978172e-01 1.01463236e+03]
+2024-11-26 16:09:27,178 - INFO - Total error calculated: 2.4900021934673138
+2024-11-26 16:09:27,179 - INFO - Calculating total error with params: [4.58978172e-01 1.01463236e+03]
+2024-11-26 16:09:27,179 - INFO - Total error calculated: 2.4900021934673133
+2024-11-26 16:09:27,179 - INFO - Calculating total error with params: [4.58978172e-01 1.01463236e+03]
+2024-11-26 16:09:27,180 - INFO - Total error calculated: 2.4900021934673133
+2024-11-26 16:09:27,180 - INFO - Calculating total error with params: [4.58978172e-01 1.01463236e+03]
+2024-11-26 16:09:27,180 - INFO - Total error calculated: 2.4900021934673133
+2024-11-26 16:09:27,180 - INFO - Calculating total error with params: [4.58978172e-01 1.01463236e+03]
+2024-11-26 16:09:27,181 - INFO - Total error calculated: 2.490002193467313
+2024-11-26 16:09:27,181 - INFO - Calculating total error with params: [4.58978172e-01 1.01463236e+03]
+2024-11-26 16:09:27,181 - INFO - Total error calculated: 2.4900021934673133
+2024-11-26 16:09:27,181 - INFO - Minimization process completed
+2024-11-26 16:09:27,181 - INFO - Estimated H0: 0.45897817153051046 km/s/Mpc
+2024-11-26 16:09:27,181 - INFO - Estimated A_V: 1014.6323550327465
