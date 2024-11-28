@@ -1,0 +1,11 @@
+2024-11-26 16:53:46,947 - INFO - Starting the process
+2024-11-26 16:53:46,947 - INFO - Reading data from Challenge2_data.json
+2024-11-26 16:53:46,947 - INFO - Data successfully read from JSON file
+2024-11-26 16:53:46,947 - INFO - Calculated radial velocities from redshift
+2024-11-26 16:53:46,948 - INFO - Initial guess for parameters: H0 = 70, E(B-V) = 0.1
+2024-11-26 16:53:46,948 - INFO - Starting optimization process
+2024-11-26 16:53:46,949 - INFO - Optimization process completed
+2024-11-26 16:53:46,950 - INFO - Best-fit parameters: H0 = 50.00, E(B-V) = 1.00
+2024-11-26 16:53:46,950 - INFO - Saving results to optimization_results.json
+2024-11-26 16:53:46,951 - INFO - Results successfully saved to JSON file
+2024-11-26 16:53:46,951 - INFO - Process completed

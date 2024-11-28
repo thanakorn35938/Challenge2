@@ -1,0 +1,13 @@
+2024-11-26 16:49:15,502 - INFO - Setting up data arrays
+2024-11-26 16:49:15,502 - INFO - Reading data from JSON file: Challenge2_data.json
+2024-11-26 16:49:15,503 - INFO - Data successfully read from JSON file
+2024-11-26 16:49:15,503 - INFO - Calculating radial velocities
+2024-11-26 16:49:15,503 - INFO - Defining the model function
+2024-11-26 16:49:15,503 - INFO - Defining the residuals function
+2024-11-26 16:49:15,503 - INFO - Starting optimization process
+2024-11-26 16:49:15,505 - INFO - Optimization process completed
+2024-11-26 16:49:15,506 - INFO - Best-fit Hubble constant (H0): 50.00 km/s/Mpc
+2024-11-26 16:49:15,507 - INFO - Best-fit R_V: 5.00
+2024-11-26 16:49:15,507 - INFO - Best-fit E(B-V): 1.00
+2024-11-26 16:49:15,508 - INFO - Saving optimization results to JSON file: optimization_results.json
+2024-11-26 16:49:15,508 - INFO - Optimization results successfully saved to JSON file
