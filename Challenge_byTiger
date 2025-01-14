@@ -1,0 +1,87 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.optimize import minimize
+from scipy.stats import linregress
+
+def corrected_distances(k, m, M):
+    D = 10 ** ((m - M + 5) / 5) / 1e6  
+    for _ in range(10):
+        A_V = k * D  
+        m_corr = m - A_V
+        D = 10 ** ((m_corr - M + 5) / 5) / 1e6  
+    return D
+
+def hubble_fit(k, m, M, z, c=3.0e5):
+    D_corr = corrected_distances(k, m, M)  
+    v_obs = c * z  
+    H0, intercept, _, _, _ = linregress(D_corr, v_obs)
+    v_pred = H0 * D_corr  
+    return np.sum((v_obs - v_pred)**2)  
+   
+def compute_H0(k, m, M, z, c=3.0e5):
+    D_corr = corrected_distances(k, m, M)  
+    v_obs = c * z  
+    H0, intercept, _, _, _ = linregress(D_corr, v_obs)
+    return H0
+
+apparent_magnitude = np.array([14.541391237647325, 16.756128786151876, 15.829604890719585,
+                               16.29457480995023, 13.829093893418786, 14.182568722430029,
+                               16.03907734592769, 17.138868011663146, 15.998250803312972,
+                               17.910486867901746, 15.074669722972802, 15.164039588647865,
+                               12.484639187522449, 15.60165860026537, 13.753617662388354,
+                               14.50453086130131, 14.147029911292748, 16.04484713334022,
+                               15.192141049675008])
+
+absolute_magnitude = np.array([-16.339065057631082, -18.177729885179346, -16.696145000879945,
+                               -19.512265201224647, -19.665756128261307, -21.24923043094372,
+                               -17.778062621886992, -17.656338949942327, -19.397655426925155,
+                               -16.93192787486793, -20.918615711799312, -18.86686028127157,
+                               -23.32220082365243, -18.32499057478847, -21.310568461137503,
+                               -18.80925829710656, -18.51036467391853, -20.29101150867485,
+                               -16.313008928644898])
+
+redshift = np.array([0.0036759669738346545, 0.02260424055745114, 0.008037853020448127,
+                     0.036351715342596735, 0.01039452291356091, 0.03358661872848456,
+                     0.014447634338827342, 0.017837996244636223, 0.030485281173716405,
+                     0.025338258561158566, 0.030141298549296147, 0.017837996244636223,
+                     0.0325517381815954, 0.011068888391776666, 0.01715898899234225,
+                     0.01208129940826752, 0.006022296587493203, 0.03220702315577939,
+                     0.004010818525698623])
+
+c = 299792.458
+
+k_initial = 0.0
+
+result = minimize(hubble_fit, k_initial, args=(apparent_magnitude, absolute_magnitude, redshift))
+
+k_best = result.x[0]
+hess_inv = result.hess_inv  
+k_error = np.sqrt(hess_inv[0][0])  
+
+Distance_array=[]
+for i in range(19):
+    Dis = 10 ** ((apparent_magnitude[i] - absolute_magnitude[i] + 5) / 5) / 1e6
+    for _ in range(10):
+        A_V = k_best * Dis
+        m_corr = apparent_magnitude[i] - A_V
+        Dis= 10 ** ((m_corr - absolute_magnitude[i] + 5) / 5) / 1e6
+    Distance_array.append(Dis)
+Distance_array=np.array(Distance_array)
+
+Velocity_array=[]
+for x in range(19):
+    v=redshift[x]*c
+    Velocity_array.append(v)
+Velocity_array=np.array(Velocity_array)
+
+slope, intercept, r_value, p_value, std_err = linregress(Distance_array,Velocity_array)
+
+x = np.linspace(0, 200, 10000)
+y=slope*x+intercept
+
+plt.scatter(Distance_array,Velocity_array)
+plt.plot(x,y)
+plt.show
+
+print("H0 =",slope, "±",std_err,"km/s-Mpc")
+print("k=",k_best,"±",k_error,"mag/Mpc")
